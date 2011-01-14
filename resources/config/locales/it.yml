@@ -1,0 +1,39 @@
+it:
+  plugins:
+    refinery_files:
+      title: Risorse
+  file_specify_for_upload: Devi scegliere un file da caricare
+  file_should_be_smaller_than_max_file_size: I file devono avere dimensioni a %{max_file_size}
+  admin:
+    resources:
+      delete: Rimuovere per sempre questo file
+      edit: Modificare questo file
+      form:
+        file_to_upload: File da caricare
+        download_current: Scarica il file corrente
+        or: o
+        replace: ", sostituirlo con questo..."
+        maximum_file_size: "La dimensione massima di un file è %{megabytes} megabytes."
+      resource:
+        download: Scarica il file corrente (%{size})
+        edit: Modifica questo file
+        delete:
+          message: Sei sicuro di voler eliminare '%{title}'?
+          title: Rimuovere per sempre questo file
+      index:
+        upload_new: Carica Nuovo File
+        no_files_yet: Nessun file presente. Fai clic su "Carica Nuovo File" per aggiungere il primo file.
+      insert:
+        existing: File esistente
+        new: Nuovo File
+        no_files: Non ci sono file.
+        existing_file: File esistente
+        link_to_resource: 'Link a questa risorsa'
+        previous: Precedente
+        next: Prossimo
+        submit_insert: Inserire
+        or: o
+        cancel: Annullare
+      existing_resource:
+        link_to_file: Collegamento a questo file
+        button_text: Inserisci

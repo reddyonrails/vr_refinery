@@ -1,0 +1,70 @@
+fr:
+  devise:
+    sessions:
+      new:
+        sign_in: Authentification
+  plugins:
+    refinery_users:
+      title: Utilisateurs
+      description: Gestion des utilisateurs
+  admin:
+    users:
+      delete: Supprimer définitivement cet utilisateur
+      edit: Modifier cet utilisateur
+      update:
+        cannot_remove_user_plugin_from_current_user: Vous ne pouvez pas supprimer l'accès au plugin de gestion des utilisateurs pour l'utilisateur sur lequel vous êtes actuellement authentifié.
+      form:
+        blank_password_keeps_current: Laisser le mot de passe vide permet de conserver le mot de passe actuel
+        enable_all: tout activer
+      index:
+        create_new_user: Créer un nouvel utilisateur
+      user:
+        email_user: Envoyer un e-mail à cet utilisateur
+        preview: (%{who}) créé le %{created_at}
+  sessions:
+    login_successful: Authentification réussie
+    new:
+      hello_please_sign_in: Bonjour ! Veuillez vous identifier.
+      sign_in: Authentification
+      forgot_password: J'ai oublié mon mot de passe
+  users:
+    setup_website_name_html: Donnez, tout d'abord, un nom à votre site. <a href='%{link}' name='%{title}'>Cliquer ici</a> pour changer le nom de votre site.
+    new:
+      fill_form: Remplissez vos coordonnées ci-dessous pour commencer.
+      sign_up: Enregistrement
+    create:
+      welcome: Bienvenue dans Refinery, %{who}
+    forgot:
+      email_address: Adresse e-mail
+      enter_email_address: Veuillez entrer votre adresse e-mail.
+      reset_password: Changer le mot de passe
+      blank_email: Vous n'avez pas entré d'adresse e-mail.
+      email_not_associated_with_account_html: Désolé, '%{email}' n'est asssocié à aucun compte.<br />Etes-vous sûr d'avoir correctement entré votre adresse e-mail ?
+      email_reset_sent: Un e-mail vous a été envoyé. Il contient un lien vous permettant de changer votre mot de passe.
+    reset:
+      code_invalid: "Nous sommes désolés mais ce code de changement de mot de passe à expiré ou est invalide. Si vous rencontrez des problèmes veuillez essayer de copier/coller l'URL fournie par l'e-mail dans votre navigateur ou de recommencer la précedure de changement de mot de passe."
+      successful: Le mot de passe pour '%{email}' a bien été changé.
+      pick_new_password_for: Choisissez un nouveau mot de passe pour %{email}
+      reset_password: Changer le mot de passe
+      password_blank: Remplissez les champs avec les mots de passe correspondants.
+  user_mailer:
+    link_to_reset_your_password: Lien pour changer votre mot de passe
+  authlogic:
+    error_messages:
+      login_blank: ne doit pas être vide
+      password_blank: ne doit pas être vide
+      login_invalid: ne doit contenir que des lettres, des chiffres, des espaces ou les caractères .-_@.
+      email_invalid: doit être une adresse e-mail valide.
+      no_authentication_details: Vous n'avez fourni aucune coordonnée pour votre authentification.
+    models:
+      user_session: SessionUtilisateur
+    attributes:
+      user_session:
+        login: Nom d'utilisateur
+        email: E-mail
+        password: Mot de passe
+        remember_me: Se souvenir de moi
+        incorrect: Désolé le '%{login_field}' ou le mot de passe est incorrect.
+  activerecord:
+    models:
+      user: utilisateur
