@@ -23,7 +23,7 @@ module AuthenticatedSystem
     end
 
     def self.included(base)
-      base.send :helper_method, :current_user, :current_user_session, :user_signed_in?, :refinery_user? if base.respond_to? :helper_method
+      base.send :helper_method, :current_admin, :current_admin_session, :admin_signed_in?, :refinery_user? if base.respond_to? :helper_method
     end
 
 end

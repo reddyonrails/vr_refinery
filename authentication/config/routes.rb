@@ -2,17 +2,17 @@
 
   # Add Devise necessary routes.
   # For Devise routes, see: https://github.com/plataformatec/devise
-  namespace :refinery do
-    devise_for :users,  :as => :registrations, :controllers => {
-      :sessions => 'sessions',
-      :registrations => 'registrations',
-      :passwords => 'passwords'
-    }, :path_names => {
-      :sign_out => 'logout',
-      :sign_in => 'login',
-      :sign_up => 'register'
-    }
-  end
+#  namespace :refinery do
+#    devise_for :users,  :as => :registrations, :controllers => {
+#      :sessions => 'sessions',
+#      :registrations => 'registrations',
+#      :passwords => 'passwords'
+#    }, :path_names => {
+#      :sign_out => 'logout',
+#      :sign_in => 'login',
+#      :sign_up => 'register'
+#    }
+#  end
 
   # Override Devise's default after login redirection route.  This will pushed a logged in user to the dashboard.
   get 'refinery', :to => 'admin/dashboard#index', :as => :refinery_root

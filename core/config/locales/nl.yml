@@ -1,9 +1,4 @@
 nl:
-  welcome:
-    there_are_no_users: "Er zijn nog geen gebruikers, dus zullen we er nu eerst een voor je maken"
-    remember_admin_location: "Onthoud dat u het beheerders gedeelte hieronder vindt:"
-    lets_start: "Goed, laten we nu jouw gebruikersaccount instellen."
-    continue: "Ga verder..."
   admin:
     menu:
       reorder_menu: Wijzig menu volgorde
@@ -13,6 +8,11 @@ nl:
         save: Opslaan
         cancel: Annuleren
   refinery:
+    welcome:
+    there_are_no_users: "Er zijn nog geen gebruikers, dus zullen we er nu eerst een voor je maken"
+    remember_admin_location: "Onthoud dat u het beheerders gedeelte hieronder vindt:"
+    lets_start: "Goed, laten we nu jouw gebruikersaccount instellen."
+    continue: "Ga verder..."
     other: "Ander %{what}"
     reorder: "Wijzig volgorde huidige %{what}"
     reorder_done: "Klaar met wijzigen van de volgorde van %{what}"

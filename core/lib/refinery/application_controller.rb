@@ -23,8 +23,7 @@ module Refinery
         c.send :include, Crud # basic create, read, update and delete methods
         c.send :include, AuthenticatedSystem
 
-        c.send :before_filter, :find_pages_for_menu
-                               #,:show_welcome_page?
+        c.send :before_filter, :find_pages_for_menu #,:show_welcome_page?
 
         c.send :after_filter, :store_current_location!,
                               :if => Proc.new {|c| c.send(:refinery_user?) rescue false }
@@ -68,7 +67,9 @@ module Refinery
       end
 
       def just_installed?
-        Role[:refinery].admins.empty?
+        #Role[:refinery].admins.empty?
+        s = RolesAdmins.all.collect {|x| x if x.role_id == Role[:Refinery].id}.compact.length
+        (s > 0 ?  false : true)
       end
 
       def local_request?
@@ -76,7 +77,7 @@ module Refinery
       end
 
       def login?
-        (controller_name =~ /^(user|session)(|s)/ and not admin?) or just_installed?
+        (controller_name =~ /^(admin|session)(|s)/ and not admin?) or just_installed?
       end
 
     protected
