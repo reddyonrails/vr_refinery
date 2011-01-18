@@ -1,4 +1,4 @@
-class RefineryAdmin::PagePartsController < RefineryAdmin::BaseController
+class Admin::PagePartsController < Admin::BaseController
 
   def new
     render :partial => "/admin/pages/page_part_field", :locals => {
