@@ -1,5 +1,4 @@
 class Admin::RefinerySettingsController < Admin::BaseController
-
   helper :refinery_settings
 
   crudify :refinery_setting,
@@ -29,10 +28,12 @@ class Admin::RefinerySettingsController < Admin::BaseController
     render :partial => 'refinery_settings', :locals => {
       :css_class => "frame_#{params[:from_page].to_s > params[:page].to_s ? 'left' : 'right'}"
     } if request.xhr?
+
+    render :layout => 'refinery/admin'
   end
 
   def new
-    if current_user.has_role?(:superuser) and params[:form_value_type].present?
+    if current_admin.has_role?(:superuser) and params[:form_value_type].present?
       @refinery_setting = RefinerySetting.new(:form_value_type => params[:form_value_type])
     else
       @refinery_setting = RefinerySetting.new(:form_value_type => 'text_area')

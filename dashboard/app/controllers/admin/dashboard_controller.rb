@@ -1,6 +1,6 @@
 
-  class Admin::DashboardController < Admin::BaseController
-  layout "admin"
+class Admin::DashboardController < Admin::BaseController
+  layout 'refinery/admin'
   def index
     @recent_activity = []
 
@@ -36,4 +36,4 @@
     render :nothing => true
   end
 
-  end
+end

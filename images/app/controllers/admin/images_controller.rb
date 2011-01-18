@@ -15,6 +15,7 @@ class Admin::ImagesController < Admin::BaseController
     if RefinerySetting.find_or_set(:group_images_by_date_uploaded, true)
       @grouped_images = group_by_date(@images)
     end
+    render :layout =>'refinery/admin'
   end
 
   def new

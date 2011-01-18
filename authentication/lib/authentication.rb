@@ -8,14 +8,14 @@ module Refinery
 
       config.after_initialize do
         Refinery::Plugin.register do |plugin|
-          plugin.name = "refinery_users"
+          plugin.name = "refinery_admins"
           plugin.version = %q{0.9.8}
-          plugin.menu_match = /(refinery|admin)\/users$/
+          plugin.menu_match = /(refinery|admin)\/admins$/
           plugin.activity = {
-            :class => User,
+            :class => Admin,
             :title => 'login'
           }
-          plugin.url = {:controller => "/admin/users"}
+          plugin.url = {:controller => "/admin/admins"}
         end
       end
     end

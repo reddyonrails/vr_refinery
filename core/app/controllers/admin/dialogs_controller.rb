@@ -1,5 +1,5 @@
 class Admin::DialogsController < Admin::BaseController
-
+  layout 'admin_dialog'
   def show
     if (@dialog_type = params[:id].try(:downcase))
       url_params = params.reject {|key, value| key =~ /(action)|(controller)/}

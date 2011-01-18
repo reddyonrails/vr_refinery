@@ -1,6 +1,6 @@
 
   class Admin::PagesController < Admin::BaseController
-    layout 'admin'
+    layout 'refinery/admin'
     crudify :page,
             :conditions => {:parent_id => nil},
             :order => "lft ASC",

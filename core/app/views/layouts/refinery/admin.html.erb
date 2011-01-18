@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <%= render :partial => "/shared/html_tag" %>
+  <% content_for :meta, "<meta refinerycms='#{Refinery.version}' />".html_safe %>
   <%= render :partial => "/admin/head" %>
-  <body id='dialog_container' class='dialog <%= I18n.locale %><%= ' wym_iframe_body' if params[:wymeditor].presence %>'>
+  <body class='<%= action_name %> <%= I18n.locale %>'>
+    <%= render :partial => '/shared/site_bar' %>
     <div id='tooltip_container'></div>
-    <div id="flash_container">
-      <%= render :partial => '/shared/message' %>
-    </div>
-    <div id='content' class='clearfix'>
-      <%= yield %>
+    <header>
+      <%= render :partial => "/admin/menu" %>
+    </header>
+    <div id="page_container">
+      <div id="page">
+        <div id="content" class="clearfix">
+          <div id="flash_container">
+            <%= render :partial => '/shared/no_script' %>
+            <%= render :partial => "/shared/message" %>
+          </div>
+          <%= yield %>
+        </div>
+      </div>
     </div>
     <%= render :partial => "/admin/javascripts" %>
   </body>

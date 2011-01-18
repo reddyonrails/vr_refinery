@@ -1,0 +1,14 @@
+<div id='records'>
+  <%= will_paginate @admins %>
+  <ul>
+    <%= render :partial => "user", :collection => @admins %>
+  </ul>
+  <%= will_paginate @admins %>
+</div>
+<div id='actions'>
+  <ul>
+    <li>
+      <%= link_to t('.create_new_user'), new_admin_admin_url, :class => "add_icon" %>
+    </li>
+  </ul>
+</div>

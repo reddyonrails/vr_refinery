@@ -4,11 +4,11 @@ en:
       new:
         sign_in: Sign in
   plugins:
-    refinery_users:
-      title: Users
-      description: Manage users
+    refinery_admins:
+      title: Admins
+      description: Manage admins
   admin:
-    users:
+    admins:
       delete: Remove this user forever
       edit: Edit this user
       update:
@@ -67,4 +67,4 @@ en:
         incorrect: Sorry, your %{login_field} or password was incorrect.
   activerecord:
     models:
-      user: user
+      admin: admin

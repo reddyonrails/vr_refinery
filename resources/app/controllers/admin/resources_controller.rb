@@ -47,6 +47,7 @@ class Admin::ResourcesController < Admin::BaseController
     if RefinerySetting.find_or_set(:group_resources_by_date_uploaded, true)
       @grouped_resources = group_by_date(@resources)
     end
+    render :layout => 'refinery/admin'
   end
 
   def insert
