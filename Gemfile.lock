@@ -24,7 +24,7 @@ GIT
   revision: a0ce59bc100d2c71f1db0683a63007f6d130c795
   branch: globalize3
   specs:
-    friendly_id (3.1.8)
+    friendly_id (3.2.0)
       babosa (~> 0.2.0)
 
 GIT
