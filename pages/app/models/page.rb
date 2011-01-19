@@ -8,7 +8,7 @@ class Page < ActiveRecord::Base
   acts_as_nested_set
 
   # Docs for friendly_id http://github.com/norman/friendly_id
-  has_friendly_id :title, :use_slug => true, :default_locale => ::Refinery::I18n.default_frontend_locale,
+  has_friendly_id :title, :use_slug => true, :default_locale => I18n.default_locale,
                   :reserved_words => %w(index new session login logout users refinery admin images wymiframe),
                   :approximate_ascii => RefinerySetting.find_or_set(:approximate_ascii, false, :scoping => "pages")
 
@@ -123,8 +123,8 @@ class Page < ActiveRecord::Base
   end
 
   def link_url_localised?
-    if self.link_url =~ %r{^/} and defined?(::Refinery::I18n) and ::Refinery::I18n.enabled? and
-       ::I18n.locale != ::Refinery::I18n.default_frontend_locale
+    if self.link_url =~ %r{^/} and defined?(::I18n)  and
+       ::I18n.locale != ::I18n.default_locale
       "/#{::I18n.locale}#{self.link_url}"
     else
       self.link_url

@@ -53,7 +53,7 @@ module Refinery
       def selected_page?(page)
         # ensure we match the path without the locale.
         path = request.path
-        if defined?(::Refinery::I18n) and ::Refinery::I18n.enabled?
+        if defined?(::I18n) and ::I18n.enabled?
           path = path.split("/#{::I18n.locale}").last
         end
 
