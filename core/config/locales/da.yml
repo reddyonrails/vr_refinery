@@ -56,7 +56,7 @@ da:
   activerecord:
     models:
       page: side
-      user: bruger
+#      user: bruger
       image: billede
       inquiry: henvendelse
       resource: fil

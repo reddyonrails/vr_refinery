@@ -34,7 +34,7 @@ java = (RUBY_PLATFORM == 'java')
 # Specify the Refinery CMS core:
 gem 'refinerycms',              :path => '.'
 
-gem 'friendly_id',              :git => 'git://github.com/parndt/friendly_id', :branch => 'globalize3'
+gem 'friendly_id',              :git => 'git://github.com/parndt/friendly_id'
 
 # Specify additional Refinery CMS Engines here (all optional):
 # gem 'refinerycms-inquiries',    '~> 0.9.9.5'
@@ -46,8 +46,8 @@ gem 'refinerycms-generators',   '~> 0.9.9', :git => 'git://github.com/resolve/re
 # gem 'refinerycms-blog',         '~> 1.1'
 
 # Add i18n support (optional, you can remove this if you really want to).
-gem 'routing-filter',           :git => 'git://github.com/refinerycms/routing-filter.git'
-gem 'refinerycms-i18n',         :git => 'git://github.com/resolve/refinerycms-i18n.git'
+#gem 'routing-filter',           :git => 'git://github.com/refinerycms/routing-filter.git'
+#gem 'refinerycms-i18n',         :git => 'git://github.com/resolve/refinerycms-i18n.git'
 
 gem 'jruby-openssl' if java
 
@@ -57,7 +57,7 @@ gem 'dragonfly',                :git => 'git://github.com/refinerycms/dragonfly.
 
 group :test do
   # RSpec
-  gem 'rspec-rails',            '~> 2.3'
+  #gem 'rspec-rails',            '~> 2.3'
   # Cucumber
   gem 'capybara',               :git => 'git://github.com/parndt/capybara.git'
   gem 'database_cleaner'

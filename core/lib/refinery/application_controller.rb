@@ -80,6 +80,12 @@ module Refinery
         (controller_name =~ /^(admin|session)(|s)/ and not admin?) or just_installed?
       end
 
+      # this hooks into the Rails render method.
+      def render(action = nil, options = {}, &blk)
+        present(@page) unless admin? or @meta.present?
+        super
+      end
+
     protected
 
       # get all the pages to be displayed in the site menu.
@@ -95,11 +101,7 @@ module Refinery
         @meta = presenter.new(model)
       end
 
-      # this hooks into the Rails render method.
-      def render(action = nil, options = {}, &blk)
-        present(@page) unless admin? or @meta.present?
-        super
-      end
+
 
       def show_welcome_page?
         render :template => "/welcome", :layout => "login" if just_installed? and %w(registrations).exclude?(controller_name)
